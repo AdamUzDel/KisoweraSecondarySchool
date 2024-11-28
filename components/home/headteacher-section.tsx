@@ -53,7 +53,7 @@ export function HeadteacherSection() {
                     <p className="text-lg leading-relaxed text-gray-600">
                       &quot;At Kisowera Secondary School, we believe in nurturing not just academic 
                       excellence, but the whole individual. Our commitment is to prepare students 
-                      for life's challenges while instilling values that will guide them throughout 
+                      for life&apos;s challenges while instilling values that will guide them throughout 
                       their journey.&quot;
                     </p>
                     <p className="text-lg leading-relaxed text-gray-600">
