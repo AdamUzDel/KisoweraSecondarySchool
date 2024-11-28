@@ -71,9 +71,9 @@ export function HeadteacherSection() {
                   {/* Signature - styled as handwriting */}
                   <div className="mt-8 border-t border-gray-200 pt-8">
                     <div className="font-dancing text-2xl text-[#6e1010]">
-                      Sarah Namukasa
+                      Dinah Grace Nakabuye
                     </div>
-                    <p className="text-sm text-gray-600">BSc. Ed, MEd, PhD (Candidate)</p>
+                    <p className="text-sm text-gray-600">BSc. Ed, MEd</p>
                   </div>
                 </div>
               </FadeInSection>
