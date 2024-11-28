@@ -95,7 +95,7 @@ export function AboutSection() {
           <div className="inline-block rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 px-8 py-4">
             <p className="text-lg font-medium text-white/80">School Motto</p>
             <p className="mt-2 text-2xl font-semibold text-white italic">
-              "Faith and Determination"
+            &quot;Faith and Determination&quot;
             </p>
           </div>
         </FadeInSection>

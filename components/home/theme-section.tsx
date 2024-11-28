@@ -35,7 +35,7 @@ export function ThemeSection() {
               <div className="text-center space-y-8">
                 <blockquote className="relative">
                   <p className="text-2xl md:text-3xl lg:text-4xl font-serif italic text-[#6e1010] leading-relaxed">
-                    "I can do all things through Christ who strengthens me."
+                    &quot;I can do all things through Christ who strengthens me.&quot;
                   </p>
                   <cite className="mt-4 block text-sm text-muted-foreground not-italic">
                     - Philippians 4:13

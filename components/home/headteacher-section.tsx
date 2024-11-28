@@ -51,20 +51,20 @@ export function HeadteacherSection() {
                   {/* Message content */}
                   <div className="space-y-6">
                     <p className="text-lg leading-relaxed text-gray-600">
-                      "At Kisowera Secondary School, we believe in nurturing not just academic 
+                      &quot;At Kisowera Secondary School, we believe in nurturing not just academic 
                       excellence, but the whole individual. Our commitment is to prepare students 
                       for life's challenges while instilling values that will guide them throughout 
-                      their journey."
+                      their journey.&quot;
                     </p>
                     <p className="text-lg leading-relaxed text-gray-600">
-                      "We take pride in our holistic approach to education, combining rigorous 
+                      &quot;We take pride in our holistic approach to education, combining rigorous 
                       academic standards with character development, leadership opportunities, 
-                      and a strong emphasis on moral values."
+                      and a strong emphasis on moral values.&quot;
                     </p>
                     <p className="text-lg leading-relaxed text-gray-600">
-                      "Together with our dedicated staff, supportive parents, and enthusiastic 
+                      &quot;Together with our dedicated staff, supportive parents, and enthusiastic 
                       students, we continue to build an educational environment where every 
-                      student can thrive and reach their full potential."
+                      student can thrive and reach their full potential.&quot;
                     </p>
                   </div>
 
