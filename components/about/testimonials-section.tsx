@@ -39,7 +39,7 @@ export function TestimonialsSection() {
                 <Quote className="absolute right-6 top-6 h-8 w-8 text-[#6e1010]/10" />
                 <div className="space-y-4">
                   <p className="text-muted-foreground relative">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                   <div className="flex items-center gap-4 pt-4 border-t">
                     <Image

@@ -36,7 +36,7 @@ export function HistorySection() {
                   Kisowera Secondary School was founded in 1985 with a vision to provide 
                   quality education to the youth of Uganda. What began as a modest 
                   institution with just two classrooms and fifty students has grown into 
-                  one of the region's most respected educational establishments.
+                  one of the region&apos;s most respected educational establishments.
                 </p>
                 <p>
                   Our journey has been marked by continuous growth, both in infrastructure 
