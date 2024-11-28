@@ -2,7 +2,7 @@ import Image from "next/image"
 import { SectionHeader } from "@/components/section-header"
 import { FadeInSection } from "@/components/fade-in-section"
 import { Card, CardContent } from "@/components/ui/card"
-import { Bed, Home, Utensils, Shield, Users, Heart } from 'lucide-react'
+import { Home, Utensils, Shield, Heart } from 'lucide-react'
 
 export function BoardingSection() {
   return (

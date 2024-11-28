@@ -1,14 +1,14 @@
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import {
   Table,
   TableBody,
   TableCell,
   TableRow,
 } from "@/components/ui/table"
-import Link from "next/link"
+import { RegistrationFormData } from "../registration-form"
 
 interface ReviewStepProps {
-  formData: any
+  formData: RegistrationFormData
   onSubmit: () => void
 }
 
@@ -73,6 +73,13 @@ export function ReviewStep({ formData, onSubmit }: ReviewStepProps) {
     }
   ]
 
+  const handleSubmit = () => {
+    const checkbox = document.getElementById('declaration') as HTMLInputElement
+    if (checkbox.checked) {
+      onSubmit()
+    }
+  }
+
   return (
     <div className="space-y-6">
       <div className="text-xl font-semibold mb-6">Review Your Information</div>
@@ -84,13 +91,13 @@ export function ReviewStep({ formData, onSubmit }: ReviewStepProps) {
             <Table>
               <TableBody>
                 {section.fields.map((field) => {
-                  const value = formData[field.key]
-                  let displayValue = value
+                  const value = formData[field.key as keyof RegistrationFormData]
+                  let displayValue: string = 'Not provided'
 
                   if (value instanceof File) {
                     displayValue = value.name
-                  } else if (!value) {
-                    displayValue = "Not provided"
+                  } else if (value) {
+                    displayValue = value.toString()
                   }
 
                   return (
@@ -115,6 +122,7 @@ export function ReviewStep({ formData, onSubmit }: ReviewStepProps) {
               type="checkbox"
               id="declaration"
               className="rounded border-gray-300 text-[#6e1010] focus:ring-[#6e1010]"
+              onChange={handleSubmit}
               required
             />
             <label htmlFor="declaration" className="text-sm">

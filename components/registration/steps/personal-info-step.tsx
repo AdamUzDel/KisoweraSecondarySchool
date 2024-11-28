@@ -6,28 +6,26 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Textarea } from "@/components/ui/textarea"
 import { RegistrationFormData } from "../registration-form"
 import { AlertCircle } from 'lucide-react'
 
-interface AcademicInfoStepProps {
+interface PersonalInfoStepProps {
   formData: RegistrationFormData
   updateFormData: (data: Partial<RegistrationFormData>) => void
   errors: Partial<Record<keyof RegistrationFormData, boolean>>
 }
 
-export function AcademicInfoStep({
-  formData,
+export function PersonalInfoStep({ 
+  formData, 
   updateFormData,
-  errors
-}: AcademicInfoStepProps) {
+  errors 
+}: PersonalInfoStepProps) {
   const renderFormField = (
     label: string,
     field: keyof RegistrationFormData,
     type: string = "text",
     required: boolean = true,
-    options?: { value: string; label: string }[],
-    isTextarea: boolean = false
+    options?: { value: string; label: string }[]
   ) => {
     const isError = errors[field]
     
@@ -55,16 +53,6 @@ export function AcademicInfoStep({
               ))}
             </SelectContent>
           </Select>
-        ) : isTextarea ? (
-          <Textarea
-            id={field}
-            value={formData[field] as string}
-            onChange={(e) => updateFormData({ [field]: e.target.value })}
-            required={required}
-            className={isError ? "border-red-500 ring-red-500" : ""}
-            aria-invalid={isError}
-            aria-describedby={isError ? `${field}-error` : undefined}
-          />
         ) : (
           <Input
             id={field}
@@ -92,37 +80,33 @@ export function AcademicInfoStep({
 
   return (
     <div className="space-y-6">
-      <div className="text-xl font-semibold mb-6">Academic Information</div>
+      <div className="text-xl font-semibold mb-6">Personal Information</div>
       
       <div className="grid sm:grid-cols-2 gap-6">
-        {renderFormField("Previous School", "previousSchool")}
-        {renderFormField("Last Grade/Class", "lastGrade")}
+        {renderFormField("First Name", "firstName")}
+        {renderFormField("Last Name", "lastName")}
+        {renderFormField("Date of Birth", "dateOfBirth", "date")}
+        {renderFormField("Gender", "gender", "text", true, [
+          { value: "male", label: "Male" },
+          { value: "female", label: "Female" }
+        ])}
+        {renderFormField("Nationality", "nationality")}
+        {renderFormField("Religion", "religion", "text", false)}
+      </div>
+
+      <div className="space-y-2">
+        {renderFormField("Residential Address", "address")}
       </div>
 
       <div className="grid sm:grid-cols-2 gap-6">
-        {renderFormField("Year Completed", "yearCompleted", "number")}
-        {renderFormField("Applying For Class", "applyingForClass", "text", true, [
-          { value: "s1", label: "Senior One" },
-          { value: "s2", label: "Senior Two" },
-          { value: "s3", label: "Senior Three" },
-          { value: "s4", label: "Senior Four" },
-          { value: "s5", label: "Senior Five" },
-          { value: "s6", label: "Senior Six" }
-        ])}
-      </div>
-
-      <div className="space-y-2">
-        {renderFormField("Academic Awards & Achievements", "academicAwards", "text", false, undefined, true)}
-      </div>
-
-      <div className="space-y-2">
-        {renderFormField("Extra-curricular Activities", "extraActivities", "text", false, undefined, true)}
+        {renderFormField("Phone Number", "studentPhone", "tel", false)}
+        {renderFormField("Email Address", "studentEmail", "email", false)}
       </div>
 
       <div className="mt-6 p-4 bg-gray-50 rounded-lg">
         <p className="text-sm text-muted-foreground">
-          Please provide accurate information about your academic background. This will help us 
-          better understand your educational needs.
+          Please ensure all required fields marked with an asterisk (*) are filled in correctly. 
+          Your personal information will be kept confidential and used only for registration purposes.
         </p>
       </div>
     </div>
